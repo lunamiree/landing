@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Page</title>
+
+<style>
+
+body{
+background:#0f0f0f;
+color:white;
+font-family:Arial;
+text-align:center;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:30px;
+}
+
+.top-img{
+width:85%;
+max-height:320px;
+object-fit:cover;
+object-position:50% 30%;
+border-radius:14px;
+margin:20px auto;
+display:block;
+}
+
+.model{
+font-size:28px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.bio{
+font-size:20px;
+line-height:1.4;
+}
+
+.button{
+display:inline-block;
+background:#ff2d55;
+padding:16px 30px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.timer{
+margin-top:30px;
+font-size:18px;
+}
+
+.bottom-img{
+width:85%;
+max-height:220px;
+object-fit:cover;
+border-radius:14px;
+margin:40px auto;
+display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="top-img" src="IMG_1085.JPG">
+
+<div class="model">
+Luna Miree
+</div>
+
+<div class="bio">
+Mon abonnement est OFFERT pour les 4 prochaines personnes avant minuit 🎁👇
+</div>
+
+<br>
+
+<a class="button" href="https://onlyfans.com/moicluna/c24">
+Plus que deux places gratuites 🔥
+</a>
+
+<div class="timer">
+⏰ Offre expire dans : <span id="countdown"></span>
+</div>
+
+<img class="bottom-img" src="IMG_0045.JPG">
+
+</div>
+
+<script>
+
+function updateCountdown(){
+
+let now = new Date();
+
+let midnight = new Date();
+midnight.setHours(24,0,0,0);
+
+let diff = midnight - now;
+
+let hours = Math.floor(diff / (1000*60*60));
+let minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+let seconds = Math.floor((diff % (1000*60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+hours + "h " + minutes + "m " + seconds + "s";
+
+}
+
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
